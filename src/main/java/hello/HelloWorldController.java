@@ -26,14 +26,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @RequestMapping("/webhook")
 public class HelloWorldController {
 
-    /*@RequestMapping(method = RequestMethod.POST)
+   /* @RequestMapping(method = RequestMethod.POST)
     public @ResponseBody WebhookResponse webhook(@RequestBody String obj){
 
         System.out.println(obj);
 
-        return new WebhookResponse("Hello! " + obj, "Text " + obj);
-    }*/
-	
+        return new WebhookResponse("Hello! " + obj);
+    }
+}	*/
 	@RequestMapping(method = RequestMethod.POST)
     public @ResponseBody WebhookResponse webhook(@RequestBody String jsonData) throws UnsupportedEncodingException{
 
@@ -86,7 +86,7 @@ public class HelloWorldController {
 					e.printStackTrace();
 				}
 		}
-        return new WebhookResponse(actionValue);
+        return new WebhookResponse(actionValue, actionValue);
     }
 		return null;
 }		
