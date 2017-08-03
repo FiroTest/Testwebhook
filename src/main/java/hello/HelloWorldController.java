@@ -33,7 +33,7 @@ public class HelloWorldController {
 		 
 		String action = getAction(jsonData);
 		
-		if(action.equalsIgnoreCase("getAddress")||action.equalsIgnoreCase("getRegistration")){
+		if(action.equalsIgnoreCase("getUser")||action.equalsIgnoreCase("getRegistration")||action.equalsIgnoreCase("getFacility")||action.equalsIgnoreCase("getTraining")){
 		CloseableHttpClient httpclient = HttpClients.custom()
 		         .build();
 		String responseBody = null;
