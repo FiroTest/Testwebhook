@@ -29,8 +29,9 @@ public class HelloWorldController {
 	@RequestMapping(method = RequestMethod.POST)
     public @ResponseBody WebhookResponse webhook(@RequestBody String jsonData) throws UnsupportedEncodingException{
 
+		
 		 String postData = "{\"question\":\"" + getResolvedQuery(jsonData) + "\"}";
-		 
+	
 		String action = getAction(jsonData);
 		
 		if(action.equalsIgnoreCase("getUser")||action.equalsIgnoreCase("getRegistration")||action.equalsIgnoreCase("getFacility")||action.equalsIgnoreCase("getTraining")){
