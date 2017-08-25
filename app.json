@@ -1,7 +1,7 @@
 {
-  "name": "API.AI webhook demonstration",
-  "description": "API.AI webhook demonstration",
-  "repository": "https://github.com/xVir/api-ai-java-webhook",
+  "name": "API.AI webhook for sip",
+  "description": "API.AI webhook for sip",
+  "repository": "https://github.com/FiroTest/sip-api-ai-webhook",
   "logo": "http://xvir.github.io/img/apiai.png",
   "keywords": ["api.ai", "natural language"]
 }
