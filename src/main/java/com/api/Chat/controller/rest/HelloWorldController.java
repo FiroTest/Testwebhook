@@ -183,7 +183,10 @@ public class HelloWorldController {
 			        JsonNode parameters = context.path("parameters");
 			        logger.info("parameters:"+parameters.asText());
 			        JsonNode username = parameters.path("username");
-			        logger.info("username:"+username.asText());
+			        JsonNode contact_number = parameters.path("contact_number");
+			        JsonNode e_mail_id = parameters.path("e-mail_id");
+			        JsonNode issue_description = parameters.path("issue_description");
+			        logger.info("username:"+username.asText()+":contact_number:"+contact_number.asText()+":e_mail_id:"+e_mail_id.asText()+":issue_description:"+issue_description.asText());
 			        String username1 = username.asText();   
 			        return username1;
 			            } catch (JsonParseException e) {
