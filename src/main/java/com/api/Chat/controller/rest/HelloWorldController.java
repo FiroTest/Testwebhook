@@ -174,7 +174,8 @@ public class HelloWorldController {
 			 ObjectMapper objectMapper = new ObjectMapper();
 			    try {
 			        JsonNode rootNode = objectMapper.readTree(jsonData.getBytes());
-			        JsonNode contexts = rootNode.path("contexts");
+			        JsonNode result = rootNode.path("result");
+			        JsonNode contexts = result.path("contexts");
 			        logger.info("contextsVal:"+contexts);
 			        JsonNode context = contexts.get(0);
 			        JsonNode name = context.path("name");
