@@ -175,11 +175,14 @@ public class HelloWorldController {
 			    try {
 			        JsonNode rootNode = objectMapper.readTree(jsonData.getBytes());
 			      
-			        JsonNode result = rootNode.path("result");
-			        JsonNode parameters = result.path("parameters");
-			        logger.info("parameters:"+parameters);
-			        JsonNode username = parameters.path("username");
-			        String username1 = username.asText();   
+			        JsonNode contexts = rootNode.path("contexts");
+			        Object contextsVal=rootNode["contexts"];
+			        logger.info("contextsVal:"+contextsVal);
+			        //JsonNode contexts.get(0);
+			        //JsonNode parameters = result.path("parameters");
+			        //logger.info("parameters:"+parameters);
+			        //JsonNode username = parameters.path("username");
+			       // String username1 = username.asText();   
 			        return username1;
 			            } catch (JsonParseException e) {
 			                e.printStackTrace();
